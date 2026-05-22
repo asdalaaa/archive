@@ -51,11 +51,11 @@ public class WebController {
                         contentType.equals("application/json") ||
                         contentType.equals("application/x-yaml") ||
                         contentType.equals("text/yaml") ||
-                        contentType.equals("application/octet-stream") // для .dat
+                        contentType.equals("application/octet-stream")
         );
 
         if (!allowedExtension || !allowedMime) {
-            model.addAttribute("message", "Недопустимый формат файла. Разрешены: txt, xml, json, yaml, dat");
+            model.addAttribute("message", "Недопустимый формат файла. Разрешены txt, xml, json, yaml, dat");
             return "upload";
         }
 
@@ -64,7 +64,7 @@ public class WebController {
             model.addAttribute("message", "Миссия успешно загружена");
         } catch (Exception e) {
             model.addAttribute("message", "Ошибка при обработке файла: " + e.getMessage());
-            e.printStackTrace(); // для отладки
+            e.printStackTrace();
         }
         return "upload";
     }

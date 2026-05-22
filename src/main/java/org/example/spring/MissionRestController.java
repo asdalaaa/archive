@@ -46,7 +46,7 @@ public class MissionRestController {
         }
 
         if (!ALLOWED_EXTENSIONS.contains(extension)) {
-            return ResponseEntity.badRequest().body("Недопустимый формат файла. Разрешены: txt, xml, json, yaml, dat");
+            return ResponseEntity.badRequest().body("Недопустимый формат файла. Разрешены txt, xml, json, yaml, dat");
         }
 
         try {

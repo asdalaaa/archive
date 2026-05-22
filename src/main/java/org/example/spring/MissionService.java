@@ -48,7 +48,7 @@ public class MissionService {
         convFile.delete();
 
         if (mission == null) {
-            throw new RuntimeException("Не удалось распарсить файл. Проверьте формат и содержимое.");
+            throw new RuntimeException("Не удалось распарсить файл. Проверьте формат и содержимо");
         }
 
         if (mission.getSorcerers() != null) {
