@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Отчет по миссии</title>
+</head>
+<body>
+<h2>Генерация отчета</h2>
+<form method="post" action="/report">
+    <input type="hidden" name="missionId" th:value="${missionId}">
+    <label>
+        <input type="checkbox" name="fullReport" value="true"> Полный отчет (включая магов и техники)
+    </label><br><br>
+    <button type="submit">Сформировать</button>
+</form>
+<hr>
+<pre th:text="${report}"></pre>
+<br><a href="/archive">К архиву</a> | <a href="/">На главную</a>
+</body>
+</html>
